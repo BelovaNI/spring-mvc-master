@@ -5,5 +5,6 @@ import web.model.Car;
 import java.util.List;
 
 public interface CarDao {
-        List<Car> getListByCount(int count);
+        List<Car> getListByCount(Integer count);
+
 }

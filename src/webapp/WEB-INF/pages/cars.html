@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
-<div>
-  <th:block th:each="msg : ${table}">
-    <h1 th:text="${msg}"></h1>
-  </th:block>
-</div>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Car List</title>
+  <style>
+    body {background-color: blue;}
+    h3   {color: yellowgreen;
+      font-family: verdana;
+      font-size: 500%;
+      text-align: center;}
+    th    {color: red;
+      font-family: courier;
+      font-size: 300%;}
+    td    {color: yellow;
+      font-family: courier;
+      font-size: 200%}
+    .table_center_by_css {
+
+      width: 300px;
+
+      border: 1px solid #000;
+
+      margin: auto;
+
+    }
+  </style>
+     </head>
+      <body>
+<h3>Car List</h3>
+<hr>
+<table>
+  <table class="table_center_by_css">
+  <tr>
+    <th>Year</th>
+    <th>Model</th>
+    <th>Series</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="car:${table}">
+    <td th:text="${car.year}"/>
+    <td th:text="${car.model}"/>
+    <td th:text="${car.series}"/>
+  </tr>
+  </tbody>
+</table>
 </body>
 </html>

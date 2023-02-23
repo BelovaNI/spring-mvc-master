@@ -19,7 +19,7 @@ public class Car {
     public String toString() {
         return "Car " +
                 " year " + year +
-                " model  " + model + '\'' +
-                "  series " + series + '\'';
+                " model  " + model +
+                "  series " + series;
     }
 }
