@@ -1,6 +1,4 @@
 package web.dao;
-
-import lombok.NonNull;
 import org.springframework.stereotype.Repository;
 import web.model.Car;
 import java.util.ArrayList;
@@ -15,10 +13,6 @@ public class CarDaoImp implements CarDao {
         list.add(new Car(2022, "Toyota", "Suprim"));
         list.add(new Car(2050, "Nissan", "Future"));
         list.add(new Car(3050, "Element", "5"));
-        if (count >= 5) {
-            return  list.subList(0, 5);
-        } else {
-            return  list.subList(0, count);
-        }
+        return  list.subList(0, count);
     }
 }
